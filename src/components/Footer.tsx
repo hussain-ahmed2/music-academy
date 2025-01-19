@@ -90,7 +90,7 @@ export default function Footer() {
 				</div>
 			</div>
 			<p className="text-center text-xs pt-8">
-				© 2024 Music School. All rights reserved.
+				© 2024 Music Academy. All rights reserved.
 			</p>
 		</footer>
 	);
