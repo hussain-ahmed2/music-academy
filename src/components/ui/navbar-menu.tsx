@@ -24,6 +24,7 @@ export const MenuItem = ({
   item: string;
   children?: React.ReactNode;
 }) => {
+  const hasChildren = React.Children.count(children) > 0;
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
@@ -39,7 +40,7 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className={`${!hasChildren && "invisible"} absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4`}>
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
