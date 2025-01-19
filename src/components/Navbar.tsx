@@ -6,7 +6,7 @@ import {
 	Menu,
 	MenuItem,
 } from "@/components/ui/navbar-menu";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 export default function Navbar({ className }: { className?: string }) {
